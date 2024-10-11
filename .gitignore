@@ -65,3 +65,5 @@ tsconfig.tsbuildinfo
 
 # Ignore coverage output from Jest or other testing frameworks
 /coverage/
+.env
+.env.local
