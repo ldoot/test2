@@ -1,12 +1,14 @@
 import { SqlDatabase } from "langchain/sql_db";
 import { DataSource } from "typeorm";
 
+
+
 export const test1 = async () => {
     console.log('eyo');
 
     const datasource = new DataSource({
         type: "sqlite",
-        database: "./chinook.db",
+        database: './chinook.db'
     });
 
     const db = await SqlDatabase.fromDataSourceParams({
