@@ -8,7 +8,7 @@ import { DataSource } from "typeorm";
 export const test2 = async () => {
     const datasource = new DataSource({
         type: "sqlite",
-        database: './chinook.db'
+        database: './Chinook_real.db'
     });
     const db = await SqlDatabase.fromDataSourceParams({
         appDataSource: datasource,
@@ -22,13 +22,18 @@ export const test2 = async () => {
     });
 
     const response = await chain.invoke({
-     question: "How many employees are there?",
+     question: "How many artists are there?",
     });
-    console.log("response", response);
+  
+    console.log("RESPONSE: ", response);
+
+    const transformedResponse = response.replace(/`/g,'').replace('sql', '');
+
+    console.log('TRANSFORMED RESPONSE: ', transformedResponse);
     /**
     response SELECT COUNT(*) FROM "Employee"
     */
-    console.log("db run result", await db.run(response));
+    console.log("db run result", await db.run(transformedResponse));
     /**
     db run result [{"COUNT(*)":8}]
     */
