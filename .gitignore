@@ -1,0 +1,67 @@
+# Node.js specific
+
+# Dependency directories
+node_modules/
+bower_components/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Directory for test coverage reports
+coverage/
+
+# Directory for compiled binary addons (from node-gyp or similar tools)
+build/
+
+# Build output directories (like dist, out)
+dist/
+out/
+
+# Optional lock file (if you're using npm or yarn, adjust accordingly)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Runtime data
+pids
+*.pid
+*.pid.lock
+
+# IDE/editor specific files
+.vscode/
+.idea/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Environment variable configuration files (e.g., sensitive data)
+.env
+.env.test
+.env.production
+
+# Miscellaneous
+*.swp
+*.swo
+
+# Optional TypeScript cache and output (adjust if applicable)
+*.tsbuildinfo
+*.d.ts
+tsconfig.tsbuildinfo
+
+# Ignore coverage output from Jest or other testing frameworks
+/coverage/
